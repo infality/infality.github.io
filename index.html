@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Stuff</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+</head>
+
+<body onload="generate()">
+	<div id="templateDiv">
+		<p>Template</p>
+		<textarea id="template" oninput="generate()">This is ^^ example with ^^ variables.</textarea>
+	</div>
+	<div id="dataDiv">
+		<p>Data</p>
+		<textarea id="data" oninput="generate()">a cool, multiple&#13;&#10;another, more</textarea>
+	</div>
+	<div id="outputDiv">
+		<p>Output</p>
+		<textarea id="output" onclick="this.select()" readonly>AA</textarea>
+	</div>
+</body>
+
+</html>
