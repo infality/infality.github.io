@@ -40,8 +40,8 @@ body {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: 450px;
-    grid-template-rows: 300px;
+    grid-template-columns: 30% 50%;
+    grid-template-rows: 40vh 40vh;
     justify-items: stretch;
     align-items: stretch;
     min-height: 100vh;
@@ -64,14 +64,20 @@ body {
     grid-row-end: span 2;
 }
 
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+}
+
 p {
     color: #bbb;
-    margin: 5px;
+    margin-bottom: 3px;
+    margin-left: 3px;
 }
 
 textarea {
-    width: 400px;
-    height: 250px;
+    flex: 1;
     resize: none;
     padding: 5px;
     font-size: 12pt;
@@ -79,9 +85,4 @@ textarea {
     color: #ddd;
     background-color: #222;
     border-width: 0;
-}
-
-#output {
-    width: 500px;
-    height: 550px;
 }

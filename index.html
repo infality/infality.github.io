@@ -9,15 +9,15 @@
 </head>
 
 <body onload="generate()">
-	<div id="templateDiv">
+	<div id="templateDiv" class="textDiv">
 		<p>Template</p>
 		<textarea id="template" oninput="generate()">This is ^0^ example with ^1^ variables.</textarea>
 	</div>
-	<div id="dataDiv">
+	<div id="dataDiv" class="textDiv">
 		<p>Data</p>
 		<textarea id="data" oninput="generate()">a cool, multiple&#13;&#10;another, more</textarea>
 	</div>
-	<div id="outputDiv">
+	<div id="outputDiv" class="textDiv">
 		<p>Output</p>
 		<textarea id="output" onclick="this.select()" readonly>AA</textarea>
 	</div>
