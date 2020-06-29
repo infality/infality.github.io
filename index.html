@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Stuff</title>
+	<title>Generator</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="script.js"></script>
 </head>
@@ -11,6 +11,14 @@
 <body onload="generate()">
 	<div id="templateDiv" class="textDiv">
 		<p>Template</p>
+		<div class="dropdown">
+			<div class="dropbtn">Presets</div>
+			<div class="dropdown-content">
+				<div onclick="applyPreset(0)">C# Property</div>
+				<div onclick="applyPreset(1)">SQL Insert</div>
+				<div onclick="applyPreset(2)">Variable</div>
+			</div>
+		</div>
 		<textarea id="template" oninput="generate()">This is ^0^ example with ^1^ variables.</textarea>
 	</div>
 	<div id="dataDiv" class="textDiv">

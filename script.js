@@ -46,3 +46,22 @@ function generate() {
 
     document.getElementById("output").value = output;
 }
+
+function applyPreset(nr) {
+    var template = "";
+    switch (nr) {
+        case 0:
+            template = "public string ^0^ {\n    get => this._^0^;\n    set => this.UpdateField(ref this._^0^, value);\n}\nprivate string _^0^;";
+            break;
+        case 1:
+            template = "INSERT INTO table_name (column1, column2, column3)\nVALUES (^0^, ^1^, ^2^);";
+            break;
+        case 2:
+            template = "public string ^0^;";
+            break;
+        default:
+            return;
+    }
+    document.getElementById("template").value = template;
+    generate();
+}
