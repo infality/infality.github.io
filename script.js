@@ -14,12 +14,12 @@ function generate() {
     var templateParts = new Array();
     var variableIndices = new Array();
     var lastPartStart = 0;
-    for (var i = 0; i < template.length - 3; i++) {
+    for (var i = 0; i < template.length - 2; i++) {
         if (template[i] == '^' && isDigit(template[i + 1]) && template[i + 2] == '^') {
             templateParts.push(template.substring(lastPartStart, i));
             variableIndices.push(Number(template.substring(i + 1, i + 2)));
             lastPartStart = i + 3;
-        } else if (template[i] == '^' && isDigit(template.substring(i + 1, i + 3)) && template[i + 3] == '^') {
+        } else if (i < template.length - 3 && template[i] == '^' && isDigit(template.substring(i + 1, i + 3)) && template[i + 3] == '^') {
             templateParts.push(template.substring(lastPartStart, i));
             variableIndices.push(Number(template.substring(i + 1, i + 3)));
             lastPartStart = i + 4;

@@ -123,6 +123,7 @@ textarea {
     align-items: center;
     padding: 0px 10px;
     cursor: default;
+    white-space: pre;
 }
 
 .dropdown-content {
