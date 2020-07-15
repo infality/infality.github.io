@@ -27,6 +27,7 @@ function generate() {
     }
     templateParts.push(template.substring(lastPartStart, template.length));
     var maxIndex = Math.max.apply(Math, variableIndices);
+    var trim = document.getElementById("trimCheckbox").checked;
 
     var output = "";
     for (var dataLine of data.split('\n')) {
@@ -39,7 +40,11 @@ function generate() {
 
         for (var i = 0; i < variableIndices.length; i++) {
             output += templateParts[i];
-            output += dataLineStrings[variableIndices[i]].trim();
+            if(trim) {
+                output += dataLineStrings[variableIndices[i]].trim();
+            } else {
+                output += dataLineStrings[variableIndices[i]];
+            }
         }
         output += templateParts[variableIndices.length] + "\n";
     }

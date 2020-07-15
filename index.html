@@ -12,7 +12,7 @@
 	<div id="templateDiv" class="textDiv">
 		<p>Template</p>
 		<div class="dropdown">
-			<div class="dropbtn">Presets  ▾</div>
+			<div class="dropBtn">Presets  ▾</div>
 			<div class="dropdown-content">
 				<div onclick="applyPreset(0)">C# Property</div>
 				<div onclick="applyPreset(1)">SQL Insert</div>
@@ -23,6 +23,10 @@
 	</div>
 	<div id="dataDiv" class="textDiv">
 		<p>Data</p>
+		<label class="checkboxContainer">Trim
+			<input type="checkbox" id="trimCheckbox" onclick="generate()" checked>
+			<span class="checkmark"></span>
+		</label>
 		<textarea id="data" oninput="generate()">a cool, multiple&#13;&#10;another, more</textarea>
 	</div>
 	<div id="outputDiv" class="textDiv">
